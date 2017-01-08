@@ -13,3 +13,5 @@ RUN apk update && apk upgrade \
   && gem install bundler \
   && bundle config --global build.nokogiri --use-system-libraries \
   && bundle config --global jobs 4
+
+RUN apk add --no-cache ruby-tzinfo
