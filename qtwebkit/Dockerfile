@@ -8,9 +8,15 @@ RUN apk update && apk upgrade \
     postgresql-dev \
     libxml2-dev \
     libxslt-dev \
+    xvfb \
+    dbus \
     qt5-qtwebkit-dev \
     nodejs \
   && ln -s /usr/lib/qt5/bin/qmake /usr/local/bin/qmake \
+  && dbus-uuidgen \
   && gem install bundler \
   && bundle config --global build.nokogiri --use-system-libraries \
   && bundle config --global jobs 4
+
+ENV DISPLAY :1
+CMD Xvfb :1 -screen 0 1024x768x24
