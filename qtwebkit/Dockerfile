@@ -8,6 +8,7 @@ RUN apk update && apk upgrade \
     libxml2-dev \
     libxslt-dev \
     qt5-qtwebkit-dev \
+    nodejs \
   && ln -s /usr/lib/qt5/bin/qmake /usr/local/bin/qmake \
   && gem install bundler \
   && bundle config --global build.nokogiri --use-system-libraries \
