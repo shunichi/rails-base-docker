@@ -17,6 +17,3 @@ RUN apk update && apk upgrade \
   && gem install bundler \
   && bundle config --global build.nokogiri --use-system-libraries \
   && bundle config --global jobs 4
-
-ENV DISPLAY :1
-CMD Xvfb :1 -screen 0 1024x768x24
