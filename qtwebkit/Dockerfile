@@ -11,6 +11,7 @@ RUN apk update && apk upgrade \
     xvfb \
     dbus \
     qt5-qtwebkit-dev \
+    mesa-dri-swrast \
     nodejs \
   && ln -s /usr/lib/qt5/bin/qmake /usr/local/bin/qmake \
   && dbus-uuidgen \
