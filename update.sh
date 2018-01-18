@@ -4,7 +4,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-for version in 2.3.3 2.3.4 2.4.1; do
+for version in 2.3.3 2.3.4 2.3.5 2.4.1 2.4.3 2.5.0; do
   for variant in phantomjs; do
     mkdir -p ruby/$version/$variant
     ruby -rerb -e "ruby_version='$version'; ERB.new(IO.read('$PWD/ruby/template/$variant/Dockerfile.erb')).run" > "ruby/$version/$variant/Dockerfile"
