@@ -9,6 +9,6 @@ RUN apt-get update \
   && mv $PHANTOM_JS /usr/local/share \
   && ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin \
   && curl -sL https://deb.nodesource.com/setup_6.x | bash - \
-  && apt-get install -y nodejs fonts-migmix\
+  && apt-get install -y nodejs fonts-migmix python-pip\
   && apt-get clean
 COPY local.conf /etc/fonts/local.conf
